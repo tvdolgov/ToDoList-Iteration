@@ -12,8 +12,7 @@ import org.springframework.web.servlet.view.JstlView;
 @Configuration
 @EnableWebMvc
 @ComponentScan({"ru.tvdolgov.todolistiteration.config", "ru.tvdolgov.todolistiteration.controller",
-        "ru.tvdolgov.todolistiteration.dao", "ru.tvdolgov.todolistiteration.entity",
-        "ru.tvdolgov.todolistiteration.service"})
+        "ru.tvdolgov.todolistiteration.dao", "ru.tvdolgov.todolistiteration.service"})
 public class WebConfig extends WebMvcConfigurerAdapter {
     @Bean
     public InternalResourceViewResolver viewResolver(){
