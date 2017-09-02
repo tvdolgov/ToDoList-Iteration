@@ -48,7 +48,8 @@ public class PrimaryDaoImpl<T> implements PrimaryDao<T> {
     }
 
     @Override
-    public List<T> getList(Class<T> entityClass) {
-        return getCurrentSession().createQuery("Select * from " + entityClass.getName()).list();
+    public List<T> getList() {
+        return getCurrentSession().createQuery( "from " + entityClass.getName()).list();
+
     }
 }

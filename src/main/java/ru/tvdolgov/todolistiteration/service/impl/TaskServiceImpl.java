@@ -36,6 +36,6 @@ public class TaskServiceImpl implements TaskService {
 
     @Override
     public List<Task> getList() {
-        return taskDao.getList(Task.class);
+        return taskDao.getList();
     }
 }

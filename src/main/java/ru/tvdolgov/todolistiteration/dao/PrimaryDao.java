@@ -42,5 +42,5 @@ public interface PrimaryDao<T> {
      * Get all entities by type
      * @return list of entities
      */
-    List<T> getList(Class<T> entityClass);
+    List<T> getList();
 }
