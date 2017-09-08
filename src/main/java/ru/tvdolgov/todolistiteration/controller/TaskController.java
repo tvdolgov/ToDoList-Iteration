@@ -1,14 +1,15 @@
 package ru.tvdolgov.todolistiteration.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
+
 import org.springframework.web.bind.annotation.*;
 import ru.tvdolgov.todolistiteration.model.Task;
 import ru.tvdolgov.todolistiteration.service.TaskService;
 
+import java.util.Date;
 import java.util.List;
 
-@Controller
+@RestController
 @RequestMapping(value = "/task")
 public class TaskController {
     @Autowired
@@ -23,6 +24,7 @@ public class TaskController {
     @RequestMapping(value = "/add", method = RequestMethod.PUT, produces = "application/json;charset=utf-8")
     @ResponseBody
     public Task addTask(@RequestBody Task task){
+        task.setCreationDate(new Date(System.currentTimeMillis()));
         return taskService.addTask(task);
     }
 

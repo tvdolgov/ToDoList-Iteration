@@ -125,8 +125,6 @@ public class TaskControllerIntegrationTest {
     private Task prefillTask() {
         Task task = new Task();
         task.setDescription("taskDescription");
-        task.setCreationDate(LocalDateTime.now());
-        task.setFinishDate(LocalDateTime.now().plusDays(7));
         return task;
     }
 }
