@@ -8,7 +8,6 @@
           integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <style>
         .text-bold {font-weight: bold;}
-
     </style>
     <script type="text/javascript">
         var myApp = angular.module('TaskManagement', []);
@@ -103,7 +102,7 @@
             <div class="input-group">
                 <div>Finish Date</div>
                 <div>
-                    <input type="date" ng-model="taskForm.finishDate"/>
+                    <input type="datetime-local" ng-model="taskForm.finishDate"/>
                 </div>
             </div>
         </div>
@@ -131,9 +130,9 @@
         </thead>
     <tr ng-repeat="task in tasks">
         <td>{{ task.id }}</td>
-        <td><span>{{ task.creationDate | date:"MM/dd/yyyy 'at' h:mma" }}</span></td>
+        <td><span>{{ task.creationDate | date:"dd.MM.yyyy HH:mm" }}</span></td>
         <td ng-class="dateClass(task.finishDate)")>
-            <span> {{ task.finishDate | date:"MM/dd/yyyy 'at' h:mma" }} </span>
+            <span> {{ task.finishDate | date:"dd.MM.yyyy HH:mm" }} </span>
         </td>
         <td>{{ task.description }}</td>
         <td><a ng-click="editTask(task)" class="btn btn-success">Edit</a>    <a

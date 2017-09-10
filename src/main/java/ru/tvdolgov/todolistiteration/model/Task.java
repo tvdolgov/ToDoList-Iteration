@@ -16,7 +16,7 @@ public class Task {
     @Column(name = "finish_date")
     private Date finishDate;
 
-    @Column(name = "description")
+    @Column(name = "description", length = 128)
     private String description;
 
     public long getId() {
